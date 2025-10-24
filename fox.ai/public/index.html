@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Chatbot</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header style="display:flex;align-items:center;justify-content:space-between;padding-bottom:8px;">
+        <div style="display:flex;align-items:center;gap:18px;">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2Z2dWZ2b2Z2dWZ2b2Z2dWZ2b2Z2dWZ2b2Z2dWZ2b2Z2dWZ2/gk3v1b6QKQyQw/giphy.gif" alt="AI Avatar" style="width:54px;height:54px;border-radius:50%;box-shadow:0 2px 12px rgba(6,182,212,0.18);object-fit:cover;" />
+          <div>
+            <h1 style="font-size:2rem;margin:0;color:var(--accent);letter-spacing:1px;">AI Chatbot</h1>
+            <p style="margin:6px 0 0 0;color:var(--muted);font-size:1rem;">A modern conversational assistant. Choose your AI model and start chatting!</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <label for="ai-select" style="font-size:0.95rem;color:var(--muted);font-weight:500;">AI Model:</label>
+          <select id="ai-select" style="padding:6px 14px;border-radius:8px;border:1px solid var(--accent);background:var(--card);color:var(--text);font-size:1rem;">
+            <option value="chatgpt">ChatGPT</option>
+            <option value="gemini">Gemini</option>
+            <option value="claude">Claude</option>
+            <option value="grok">Grok</option>
+          </select>
+        </div>
+      </header>
+
+  <!-- Mode banner removed for cleaner look -->
+
+      <main style="display:flex;flex-direction:column;align-items:center;gap:18px;">
+        <div id="chat" class="chat" style="width:100%;max-width:600px;background:rgba(255,255,255,0.04);padding:18px 16px 12px 16px;border-radius:12px;box-shadow:0 2px 16px rgba(6,182,212,0.08);min-height:320px;max-height:60vh;overflow:auto;"></div>
+        <form id="chat-form" style="display:flex;gap:10px;width:100%;max-width:600px;">
+          <input id="input" placeholder="Your message..." autocomplete="off" style="flex:1;padding:14px 16px;border-radius:10px;border:1px solid var(--accent);background:var(--card);color:var(--text);font-size:1.1rem;box-shadow:0 1px 4px rgba(6,182,212,0.04);" />
+          <button type="submit" style="padding:14px 24px;border-radius:10px;border:none;background:var(--accent);color:#012;font-size:1.1rem;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(6,182,212,0.10);transition:background 0.2s;">Send</button>
+        </form>
+      </main>
+
+      <footer style="margin-top:18px;color:var(--muted);font-size:14px;text-align:center;">
+        <small id="status">AI Chatbot is ready to assist you.</small>
+        <br>
+        <span style="font-size:12px;opacity:0.7;">© 2025 Modern AI Chatbot. Powered by Gemini, ChatGPT, Claude, Grok.</span>
+      </footer>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
